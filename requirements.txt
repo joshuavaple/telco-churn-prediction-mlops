@@ -1,0 +1,12 @@
+pandas==2.2.3
+scikit-learn==1.5.2
+matplotlib
+requests==2.32.3
+ipykernel
+loguru
+xgboost==2.1.1
+pyarrow
+tpot==0.12.2
+fastapi==0.115.0
+uvicorn
+python-dotenv
