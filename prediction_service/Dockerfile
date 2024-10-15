@@ -15,4 +15,4 @@ EXPOSE 8082
 RUN pip install -r requirements.txt --no-cache-dir
 
 # command to run on container start
-CMD ["uvicorn", "main_auth:app", "--host", "0.0.0.0", "--port", "8082"]
+CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8082"]
