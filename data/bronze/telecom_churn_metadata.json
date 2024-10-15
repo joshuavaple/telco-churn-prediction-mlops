@@ -1,0 +1,303 @@
+{
+    "@context": {
+        "@language": "en",
+        "@vocab": "https://schema.org/",
+        "citeAs": "cr:citeAs",
+        "column": "cr:column",
+        "conformsTo": "dct:conformsTo",
+        "cr": "http://mlcommons.org/croissant/",
+        "data": {
+            "@id": "cr:data",
+            "@type": "@json"
+        },
+        "dataBiases": "cr:dataBiases",
+        "dataCollection": "cr:dataCollection",
+        "dataType": {
+            "@id": "cr:dataType",
+            "@type": "@vocab"
+        },
+        "dct": "http://purl.org/dc/terms/",
+        "extract": "cr:extract",
+        "field": "cr:field",
+        "fileProperty": "cr:fileProperty",
+        "fileObject": "cr:fileObject",
+        "fileSet": "cr:fileSet",
+        "format": "cr:format",
+        "includes": "cr:includes",
+        "isEnumeration": "cr:isEnumeration",
+        "jsonPath": "cr:jsonPath",
+        "key": "cr:key",
+        "md5": "cr:md5",
+        "parentField": "cr:parentField",
+        "path": "cr:path",
+        "personalSensitiveInformation": "cr:personalSensitiveInformation",
+        "recordSet": "cr:recordSet",
+        "references": "cr:references",
+        "regex": "cr:regex",
+        "repeated": "cr:repeated",
+        "replace": "cr:replace",
+        "sc": "https://schema.org/",
+        "separator": "cr:separator",
+        "source": "cr:source",
+        "subField": "cr:subField",
+        "transform": "cr:transform",
+        "wd": "https://www.wikidata.org/wiki/"
+    },
+    "alternateName": "Predict Customer Churn in a Telecom Industry ",
+    "conformsTo": "http://mlcommons.org/croissant/1.0",
+    "license": {
+        "@type": "sc:CreativeWork",
+        "name": "Data files \u00A9 Original Authors"
+    },
+    "distribution": [
+        {
+            "contentUrl": "https://www.kaggle.com/api/v1/datasets/download/barun2104/telecom-churn?datasetVersionNumber=2",
+            "contentSize": "45.483 KB",
+            "md5": "VnJWE54cN9e3H8zgKglC6w==",
+            "encodingFormat": "application/zip",
+            "@id": "archive.zip",
+            "@type": "cr:FileObject",
+            "name": "archive.zip",
+            "description": "Archive containing all the contents of the Customer Churn dataset"
+        },
+        {
+            "contentUrl": "telecom_churn.csv",
+            "containedIn": {
+                "@id": "archive.zip"
+            },
+            "encodingFormat": "text/csv",
+            "@id": "telecom_churn.csv_fileobject",
+            "@type": "cr:FileObject",
+            "name": "telecom_churn.csv",
+            "description": "Each row represents a customer and each column contains attributes related to customer as described in the column description.\n\nThe \u201CChurn\u201D column is our target variable."
+        }
+    ],
+    "recordSet": [
+        {
+            "field": [
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "telecom_churn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Churn"
+                        }
+                    },
+                    "@id": "telecom_churn.csv/Churn",
+                    "@type": "cr:Field",
+                    "name": "Churn",
+                    "description": "1 if customer cancelled service, 0 if not"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "telecom_churn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "AccountWeeks"
+                        }
+                    },
+                    "@id": "telecom_churn.csv/AccountWeeks",
+                    "@type": "cr:Field",
+                    "name": "AccountWeeks",
+                    "description": "number of weeks customer has had active account"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "telecom_churn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "ContractRenewal"
+                        }
+                    },
+                    "@id": "telecom_churn.csv/ContractRenewal",
+                    "@type": "cr:Field",
+                    "name": "ContractRenewal",
+                    "description": "1 if customer recently renewed contract, 0 if not"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "telecom_churn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "DataPlan"
+                        }
+                    },
+                    "@id": "telecom_churn.csv/DataPlan",
+                    "@type": "cr:Field",
+                    "name": "DataPlan",
+                    "description": "1 if customer has data plan, 0 if not"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "telecom_churn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "DataUsage"
+                        }
+                    },
+                    "@id": "telecom_churn.csv/DataUsage",
+                    "@type": "cr:Field",
+                    "name": "DataUsage",
+                    "description": "gigabytes of monthly data usage"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "telecom_churn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "CustServCalls"
+                        }
+                    },
+                    "@id": "telecom_churn.csv/CustServCalls",
+                    "@type": "cr:Field",
+                    "name": "CustServCalls",
+                    "description": "number of calls into customer service"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "telecom_churn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "DayMins"
+                        }
+                    },
+                    "@id": "telecom_churn.csv/DayMins",
+                    "@type": "cr:Field",
+                    "name": "DayMins",
+                    "description": "average daytime minutes per month"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "telecom_churn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "DayCalls"
+                        }
+                    },
+                    "@id": "telecom_churn.csv/DayCalls",
+                    "@type": "cr:Field",
+                    "name": "DayCalls",
+                    "description": "average number of daytime calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "telecom_churn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "MonthlyCharge"
+                        }
+                    },
+                    "@id": "telecom_churn.csv/MonthlyCharge",
+                    "@type": "cr:Field",
+                    "name": "MonthlyCharge",
+                    "description": "average monthly bill"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "telecom_churn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "OverageFee"
+                        }
+                    },
+                    "@id": "telecom_churn.csv/OverageFee",
+                    "@type": "cr:Field",
+                    "name": "OverageFee",
+                    "description": "largest overage fee in last 12 months"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "telecom_churn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "RoamMins"
+                        }
+                    },
+                    "@id": "telecom_churn.csv/RoamMins",
+                    "@type": "cr:Field",
+                    "name": "RoamMins",
+                    "description": "average number of roaming minutes"
+                }
+            ],
+            "@id": "telecom_churn.csv",
+            "@type": "cr:RecordSet",
+            "name": "telecom_churn.csv",
+            "description": "Each row represents a customer and each column contains attributes related to customer as described in the column description.\n\nThe \u201CChurn\u201D column is our target variable."
+        }
+    ],
+    "version": 2,
+    "keywords": [
+        "task \u003E binary-classification",
+        "data type \u003E tabular",
+        "subject \u003E people and society \u003E business"
+    ],
+    "isAccessibleForFree": true,
+    "includedInDataCatalog": {
+        "@type": "sc:DataCatalog",
+        "name": "Kaggle",
+        "url": "https://www.kaggle.com"
+    },
+    "creator": {
+        "@type": "sc:Person",
+        "name": "Barun Kumar",
+        "url": "/barun2104",
+        "image": "https://storage.googleapis.com/kaggle-avatars/thumbnails/684804-kg.png"
+    },
+    "publisher": {
+        "@type": "sc:Organization",
+        "name": "Kaggle",
+        "url": "https://www.kaggle.com/organizations/kaggle",
+        "image": "https://storage.googleapis.com/kaggle-organizations/4/thumbnail.png"
+    },
+    "thumbnailUrl": "https://storage.googleapis.com/kaggle-datasets-images/567482/1030103/704c43ddb62aacb8cdf8a04bbfe7ec30/dataset-card.jpg?t=2020-03-24-11-27-39",
+    "dateModified": "2020-03-23T16:30:13.047",
+    "datePublished": "2020-03-24T12:14:27.0530159",
+    "@type": "sc:Dataset",
+    "name": "Customer Churn",
+    "url": "https://www.kaggle.com/datasets/barun2104/telecom-churn/versions/2",
+    "description": "### Context\n\nWith the rapid development of telecommunication industry, the service providers are inclined more towards expansion of the subscriber base. To meet the need of surviving in the competitive environment, the retention of existing customers has become a huge challenge. It is stated that the cost of acquiring a new customer is far more than that for retaining the existing one. Therefore, it is imperative for the telecom industries to use advanced analytics to understand consumer behavior and in-turn predict the association of the customers as whether or not they will leave the company. \n\n\n### Content\n\nThis data set contains customer level information for a telecom company. Various attributes related to the services used are recorded for each customer.\n\n\n### Inspiration\n\nSome possible insights could be - \n1. What variables are contributing to customer churn?\n2. Who are the customers more likely to churn?\n3. What actions can be taken to stop them from leaving?"
+}

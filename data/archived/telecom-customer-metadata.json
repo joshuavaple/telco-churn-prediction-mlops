@@ -1,0 +1,1814 @@
+{
+    "@context": {
+        "@language": "en",
+        "@vocab": "https://schema.org/",
+        "citeAs": "cr:citeAs",
+        "column": "cr:column",
+        "conformsTo": "dct:conformsTo",
+        "cr": "http://mlcommons.org/croissant/",
+        "data": {
+            "@id": "cr:data",
+            "@type": "@json"
+        },
+        "dataBiases": "cr:dataBiases",
+        "dataCollection": "cr:dataCollection",
+        "dataType": {
+            "@id": "cr:dataType",
+            "@type": "@vocab"
+        },
+        "dct": "http://purl.org/dc/terms/",
+        "extract": "cr:extract",
+        "field": "cr:field",
+        "fileProperty": "cr:fileProperty",
+        "fileObject": "cr:fileObject",
+        "fileSet": "cr:fileSet",
+        "format": "cr:format",
+        "includes": "cr:includes",
+        "isEnumeration": "cr:isEnumeration",
+        "jsonPath": "cr:jsonPath",
+        "key": "cr:key",
+        "md5": "cr:md5",
+        "parentField": "cr:parentField",
+        "path": "cr:path",
+        "personalSensitiveInformation": "cr:personalSensitiveInformation",
+        "recordSet": "cr:recordSet",
+        "references": "cr:references",
+        "regex": "cr:regex",
+        "repeated": "cr:repeated",
+        "replace": "cr:replace",
+        "sc": "https://schema.org/",
+        "separator": "cr:separator",
+        "source": "cr:source",
+        "subField": "cr:subField",
+        "transform": "cr:transform",
+        "wd": "https://www.wikidata.org/wiki/"
+    },
+    "alternateName": "customer churn prediction",
+    "conformsTo": "http://mlcommons.org/croissant/1.0",
+    "license": {
+        "@type": "sc:CreativeWork",
+        "name": "Unknown"
+    },
+    "distribution": [
+        {
+            "contentUrl": "https://www.kaggle.com/api/v1/datasets/download/abhinav89/telecom-customer?datasetVersionNumber=1",
+            "contentSize": "13.567 MB",
+            "md5": "mp3od7f/R9PnCNmXzPxSWg==",
+            "encodingFormat": "application/zip",
+            "@id": "archive.zip",
+            "@type": "cr:FileObject",
+            "name": "archive.zip",
+            "description": "Archive containing all the contents of the Telecom customer dataset"
+        },
+        {
+            "contentUrl": "Telecom_customer churn.csv",
+            "containedIn": {
+                "@id": "archive.zip"
+            },
+            "encodingFormat": "text/csv",
+            "@id": "Telecom_customer\u002Bchurn.csv_fileobject",
+            "@type": "cr:FileObject",
+            "name": "Telecom_customer churn.csv",
+            "description": "This data set consists of 100 variables and approx 100 thousand records. "
+        }
+    ],
+    "recordSet": [
+        {
+            "field": [
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "rev_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/rev_Mean",
+                    "@type": "cr:Field",
+                    "name": "rev_Mean",
+                    "description": "Mean monthly revenue (charge amount)"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "mou_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/mou_Mean",
+                    "@type": "cr:Field",
+                    "name": "mou_Mean",
+                    "description": "Mean number of monthly minutes of use"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "totmrc_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/totmrc_Mean",
+                    "@type": "cr:Field",
+                    "name": "totmrc_Mean",
+                    "description": "Mean total monthly recurring charge"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "da_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/da_Mean",
+                    "@type": "cr:Field",
+                    "name": "da_Mean",
+                    "description": "Mean number of directory assisted calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "ovrmou_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/ovrmou_Mean",
+                    "@type": "cr:Field",
+                    "name": "ovrmou_Mean",
+                    "description": "Mean overage minutes of use"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "ovrrev_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/ovrrev_Mean",
+                    "@type": "cr:Field",
+                    "name": "ovrrev_Mean",
+                    "description": "Mean overage revenue"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "vceovr_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/vceovr_Mean",
+                    "@type": "cr:Field",
+                    "name": "vceovr_Mean",
+                    "description": "Mean revenue of voice overage "
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "datovr_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/datovr_Mean",
+                    "@type": "cr:Field",
+                    "name": "datovr_Mean",
+                    "description": " Mean revenue of data overage"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "roam_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/roam_Mean",
+                    "@type": "cr:Field",
+                    "name": "roam_Mean",
+                    "description": "Mean number of roaming calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "change_mou"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/change_mou",
+                    "@type": "cr:Field",
+                    "name": "change_mou",
+                    "description": "Percentage change in monthly minutes of use vs previous three month average"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "change_rev"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/change_rev",
+                    "@type": "cr:Field",
+                    "name": "change_rev",
+                    "description": " Percentage change in monthly revenue vs previous three month average"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "drop_vce_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/drop_vce_Mean",
+                    "@type": "cr:Field",
+                    "name": "drop_vce_Mean",
+                    "description": " Mean number of dropped (failed) voice calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "drop_dat_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/drop_dat_Mean",
+                    "@type": "cr:Field",
+                    "name": "drop_dat_Mean",
+                    "description": "Mean number of dropped (failed) data calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "blck_vce_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/blck_vce_Mean",
+                    "@type": "cr:Field",
+                    "name": "blck_vce_Mean",
+                    "description": "Mean number of blocked (failed) voice calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "blck_dat_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/blck_dat_Mean",
+                    "@type": "cr:Field",
+                    "name": "blck_dat_Mean",
+                    "description": "Mean number of blocked (failed) data calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "unan_vce_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/unan_vce_Mean",
+                    "@type": "cr:Field",
+                    "name": "unan_vce_Mean",
+                    "description": "Mean number of unanswered voice calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "unan_dat_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/unan_dat_Mean",
+                    "@type": "cr:Field",
+                    "name": "unan_dat_Mean",
+                    "description": "Mean number of unanswered data calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "plcd_vce_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/plcd_vce_Mean",
+                    "@type": "cr:Field",
+                    "name": "plcd_vce_Mean",
+                    "description": "Mean number of attempted voice calls placed"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "plcd_dat_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/plcd_dat_Mean",
+                    "@type": "cr:Field",
+                    "name": "plcd_dat_Mean",
+                    "description": "Mean number of attempted data calls placed"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "recv_vce_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/recv_vce_Mean",
+                    "@type": "cr:Field",
+                    "name": "recv_vce_Mean",
+                    "description": "Mean number of received voice calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "recv_sms_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/recv_sms_Mean",
+                    "@type": "cr:Field",
+                    "name": "recv_sms_Mean",
+                    "description": " N"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "comp_vce_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/comp_vce_Mean",
+                    "@type": "cr:Field",
+                    "name": "comp_vce_Mean",
+                    "description": "Mean number of completed voice calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "comp_dat_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/comp_dat_Mean",
+                    "@type": "cr:Field",
+                    "name": "comp_dat_Mean",
+                    "description": "Mean number of completed data calls "
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "custcare_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/custcare_Mean",
+                    "@type": "cr:Field",
+                    "name": "custcare_Mean",
+                    "description": "Mean number of customer care calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "ccrndmou_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/ccrndmou_Mean",
+                    "@type": "cr:Field",
+                    "name": "ccrndmou_Mean",
+                    "description": "Mean rounded minutes of use of customer care calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "cc_mou_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/cc_mou_Mean",
+                    "@type": "cr:Field",
+                    "name": "cc_mou_Mean",
+                    "description": "Mean unrounded minutes of use of customer care (see CUSTCARE_MEAN) calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "inonemin_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/inonemin_Mean",
+                    "@type": "cr:Field",
+                    "name": "inonemin_Mean",
+                    "description": "Mean number of inbound calls less than one minute"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "threeway_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/threeway_Mean",
+                    "@type": "cr:Field",
+                    "name": "threeway_Mean",
+                    "description": "Mean number of three way calls "
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "mou_cvce_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/mou_cvce_Mean",
+                    "@type": "cr:Field",
+                    "name": "mou_cvce_Mean",
+                    "description": "Mean unrounded minutes of use of completed voice calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "mou_cdat_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/mou_cdat_Mean",
+                    "@type": "cr:Field",
+                    "name": "mou_cdat_Mean",
+                    "description": "Mean unrounded minutes of use of completed data calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "mou_rvce_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/mou_rvce_Mean",
+                    "@type": "cr:Field",
+                    "name": "mou_rvce_Mean",
+                    "description": "Mean unrounded minutes of use of received voice calls "
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "owylis_vce_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/owylis_vce_Mean",
+                    "@type": "cr:Field",
+                    "name": "owylis_vce_Mean",
+                    "description": "Mean number of outbound wireless to wireless voice calls "
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "mouowylisv_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/mouowylisv_Mean",
+                    "@type": "cr:Field",
+                    "name": "mouowylisv_Mean",
+                    "description": "Mean unrounded minutes of use of outbound wireless to wireless voice calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "iwylis_vce_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/iwylis_vce_Mean",
+                    "@type": "cr:Field",
+                    "name": "iwylis_vce_Mean",
+                    "description": " N"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "mouiwylisv_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/mouiwylisv_Mean",
+                    "@type": "cr:Field",
+                    "name": "mouiwylisv_Mean",
+                    "description": "Mean unrounded minutes of use of inbound wireless to wireless voice calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "peak_vce_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/peak_vce_Mean",
+                    "@type": "cr:Field",
+                    "name": "peak_vce_Mean",
+                    "description": "Mean number of inbound and outbound peak voice calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "peak_dat_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/peak_dat_Mean",
+                    "@type": "cr:Field",
+                    "name": "peak_dat_Mean",
+                    "description": "Mean number of peak data calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "mou_peav_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/mou_peav_Mean",
+                    "@type": "cr:Field",
+                    "name": "mou_peav_Mean",
+                    "description": "Mean unrounded minutes of use of peak voice calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "mou_pead_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/mou_pead_Mean",
+                    "@type": "cr:Field",
+                    "name": "mou_pead_Mean",
+                    "description": "Mean unrounded minutes of use of peak data calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "opk_vce_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/opk_vce_Mean",
+                    "@type": "cr:Field",
+                    "name": "opk_vce_Mean",
+                    "description": "Mean number of off-peak voice calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "opk_dat_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/opk_dat_Mean",
+                    "@type": "cr:Field",
+                    "name": "opk_dat_Mean",
+                    "description": "Mean number of off-peak data calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "mou_opkv_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/mou_opkv_Mean",
+                    "@type": "cr:Field",
+                    "name": "mou_opkv_Mean",
+                    "description": "Mean unrounded minutes of use of off-peak voice calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "mou_opkd_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/mou_opkd_Mean",
+                    "@type": "cr:Field",
+                    "name": "mou_opkd_Mean",
+                    "description": "Mean unrounded minutes of use of off-peak data calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "drop_blk_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/drop_blk_Mean",
+                    "@type": "cr:Field",
+                    "name": "drop_blk_Mean",
+                    "description": "Mean number of dropped or blocked calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "attempt_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/attempt_Mean",
+                    "@type": "cr:Field",
+                    "name": "attempt_Mean",
+                    "description": "Mean number of attempted calls "
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "complete_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/complete_Mean",
+                    "@type": "cr:Field",
+                    "name": "complete_Mean",
+                    "description": "Mean number of completed calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "callfwdv_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/callfwdv_Mean",
+                    "@type": "cr:Field",
+                    "name": "callfwdv_Mean",
+                    "description": " Mean number of call forwarding calls "
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "callwait_Mean"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/callwait_Mean",
+                    "@type": "cr:Field",
+                    "name": "callwait_Mean",
+                    "description": "Mean number of call waiting calls"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "churn"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/churn",
+                    "@type": "cr:Field",
+                    "name": "churn",
+                    "description": "Instance of churn between 31-60 days after observation date"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "months"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/months",
+                    "@type": "cr:Field",
+                    "name": "months",
+                    "description": "Total number of months in service"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "uniqsubs"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/uniqsubs",
+                    "@type": "cr:Field",
+                    "name": "uniqsubs",
+                    "description": "Number of unique subscribers in the household"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "actvsubs"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/actvsubs",
+                    "@type": "cr:Field",
+                    "name": "actvsubs",
+                    "description": " Number of active subscribers in household"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "new_cell"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/new_cell",
+                    "@type": "cr:Field",
+                    "name": "new_cell",
+                    "description": "New cell phone user"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "crclscod"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/crclscod",
+                    "@type": "cr:Field",
+                    "name": "crclscod",
+                    "description": " Credit class code"
+                },
+                {
+                    "dataType": [
+                        "sc:Boolean"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "asl_flag"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/asl_flag",
+                    "@type": "cr:Field",
+                    "name": "asl_flag",
+                    "description": " Account spending limit"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "totcalls"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/totcalls",
+                    "@type": "cr:Field",
+                    "name": "totcalls",
+                    "description": "Total number of calls over the life of the customer"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "totmou"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/totmou",
+                    "@type": "cr:Field",
+                    "name": "totmou",
+                    "description": "Total minutes of use over the life of the customer"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "totrev"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/totrev",
+                    "@type": "cr:Field",
+                    "name": "totrev",
+                    "description": "Total revenue"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "adjrev"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/adjrev",
+                    "@type": "cr:Field",
+                    "name": "adjrev",
+                    "description": "Billing adjusted total revenue over the life of the customer"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "adjmou"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/adjmou",
+                    "@type": "cr:Field",
+                    "name": "adjmou",
+                    "description": "Billing adjusted total minutes of use over the life of the customer"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "adjqty"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/adjqty",
+                    "@type": "cr:Field",
+                    "name": "adjqty",
+                    "description": "Billing adjusted total number of calls over the life of the customer "
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "avgrev"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/avgrev",
+                    "@type": "cr:Field",
+                    "name": "avgrev",
+                    "description": "Average monthly revenue over the life of the customer"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "avgmou"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/avgmou",
+                    "@type": "cr:Field",
+                    "name": "avgmou",
+                    "description": "Average monthly minutes of use over the life of the customer"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "avgqty"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/avgqty",
+                    "@type": "cr:Field",
+                    "name": "avgqty",
+                    "description": "Average monthly number of calls over the life of the customer"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "avg3mou"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/avg3mou",
+                    "@type": "cr:Field",
+                    "name": "avg3mou",
+                    "description": "Average monthly minutes of use over the previous three months"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "avg3qty"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/avg3qty",
+                    "@type": "cr:Field",
+                    "name": "avg3qty",
+                    "description": "Average monthly number of calls over the previous three months "
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "avg3rev"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/avg3rev",
+                    "@type": "cr:Field",
+                    "name": "avg3rev",
+                    "description": "Average monthly revenue over the previous three months"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "avg6mou"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/avg6mou",
+                    "@type": "cr:Field",
+                    "name": "avg6mou",
+                    "description": "Average monthly minutes of use over the previous six months"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "avg6qty"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/avg6qty",
+                    "@type": "cr:Field",
+                    "name": "avg6qty",
+                    "description": "Average monthly number of calls over the previous six months"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "avg6rev"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/avg6rev",
+                    "@type": "cr:Field",
+                    "name": "avg6rev",
+                    "description": "Average monthly revenue over the previous six months "
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "prizm_social_one"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/prizm_social_one",
+                    "@type": "cr:Field",
+                    "name": "prizm_social_one",
+                    "description": " Social group letter only"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "area"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/area",
+                    "@type": "cr:Field",
+                    "name": "area",
+                    "description": "Geogrpahic area "
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "dualband"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/dualband",
+                    "@type": "cr:Field",
+                    "name": "dualband",
+                    "description": "Dualband"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "refurb_new"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/refurb_new",
+                    "@type": "cr:Field",
+                    "name": "refurb_new",
+                    "description": "Handset: refurbished or new"
+                },
+                {
+                    "dataType": [
+                        "sc:Float"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "hnd_price"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/hnd_price",
+                    "@type": "cr:Field",
+                    "name": "hnd_price",
+                    "description": "Current handset price"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "phones"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/phones",
+                    "@type": "cr:Field",
+                    "name": "phones",
+                    "description": " Number of handsets issued"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "models"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/models",
+                    "@type": "cr:Field",
+                    "name": "models",
+                    "description": "Number of models issued"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "hnd_webcap"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/hnd_webcap",
+                    "@type": "cr:Field",
+                    "name": "hnd_webcap",
+                    "description": "Handset web capability"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "truck"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/truck",
+                    "@type": "cr:Field",
+                    "name": "truck",
+                    "description": "Truck indicator "
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "rv"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/rv",
+                    "@type": "cr:Field",
+                    "name": "rv",
+                    "description": "RV indicator"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "ownrent"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/ownrent",
+                    "@type": "cr:Field",
+                    "name": "ownrent",
+                    "description": "Home owner/renter status"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "lor"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/lor",
+                    "@type": "cr:Field",
+                    "name": "lor",
+                    "description": "Length of residence"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "dwlltype"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/dwlltype",
+                    "@type": "cr:Field",
+                    "name": "dwlltype",
+                    "description": " Dwelling Unit type"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "marital"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/marital",
+                    "@type": "cr:Field",
+                    "name": "marital",
+                    "description": "Marital Status "
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "adults"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/adults",
+                    "@type": "cr:Field",
+                    "name": "adults",
+                    "description": "Number of adults in household"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "infobase"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/infobase",
+                    "@type": "cr:Field",
+                    "name": "infobase",
+                    "description": "InfoBase match"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "income"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/income",
+                    "@type": "cr:Field",
+                    "name": "income",
+                    "description": "Estimated income"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "numbcars"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/numbcars",
+                    "@type": "cr:Field",
+                    "name": "numbcars",
+                    "description": "Known number of vehicles"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "HHstatin"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/HHstatin",
+                    "@type": "cr:Field",
+                    "name": "HHstatin",
+                    "description": "Premier household status indicator"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "dwllsize"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/dwllsize",
+                    "@type": "cr:Field",
+                    "name": "dwllsize",
+                    "description": "Dwelling size "
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "forgntvl"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/forgntvl",
+                    "@type": "cr:Field",
+                    "name": "forgntvl",
+                    "description": "Foreign travel dummy variable"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "ethnic"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/ethnic",
+                    "@type": "cr:Field",
+                    "name": "ethnic",
+                    "description": "Ethnicity roll-up code"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "kid0_2"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/kid0_2",
+                    "@type": "cr:Field",
+                    "name": "kid0_2",
+                    "description": "Child 0 - 2 years of age in household"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "kid3_5"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/kid3_5",
+                    "@type": "cr:Field",
+                    "name": "kid3_5",
+                    "description": "Child 3 - 5 years of age in household "
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "kid6_10"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/kid6_10",
+                    "@type": "cr:Field",
+                    "name": "kid6_10",
+                    "description": "Child 6 - 10 years of age in household"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "kid11_15"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/kid11_15",
+                    "@type": "cr:Field",
+                    "name": "kid11_15",
+                    "description": "Child 11 - 15 years of age in household"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "kid16_17"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/kid16_17",
+                    "@type": "cr:Field",
+                    "name": "kid16_17",
+                    "description": "Child 16 - 17 years of age in household"
+                },
+                {
+                    "dataType": [
+                        "sc:Boolean"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "creditcd"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/creditcd",
+                    "@type": "cr:Field",
+                    "name": "creditcd",
+                    "description": "Credit card indicator"
+                },
+                {
+                    "dataType": [
+                        "sc:Integer"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "eqpdays"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/eqpdays",
+                    "@type": "cr:Field",
+                    "name": "eqpdays",
+                    "description": "Number of days (age) of current equipment"
+                },
+                {
+                    "dataType": [
+                        "sc:Text"
+                    ],
+                    "source": {
+                        "fileObject": {
+                            "@id": "Telecom_customer\u002Bchurn.csv_fileobject"
+                        },
+                        "extract": {
+                            "column": "Customer_ID"
+                        }
+                    },
+                    "@id": "Telecom_customer\u002Bchurn.csv/Customer_ID",
+                    "@type": "cr:Field",
+                    "name": "Customer_ID",
+                    "description": "N"
+                }
+            ],
+            "@id": "Telecom_customer\u002Bchurn.csv",
+            "@type": "cr:RecordSet",
+            "name": "Telecom_customer churn.csv",
+            "description": "This data set consists of 100 variables and approx 100 thousand records. "
+        }
+    ],
+    "version": 1,
+    "keywords": [
+        "subject \u003E people and society \u003E business"
+    ],
+    "isAccessibleForFree": true,
+    "includedInDataCatalog": {
+        "@type": "sc:DataCatalog",
+        "name": "Kaggle",
+        "url": "https://www.kaggle.com"
+    },
+    "creator": {
+        "@type": "sc:Person",
+        "name": "abhinav",
+        "url": "/abhinav89",
+        "image": "https://storage.googleapis.com/kaggle-avatars/thumbnails/default-thumb.png"
+    },
+    "publisher": {
+        "@type": "sc:Organization",
+        "name": "Kaggle",
+        "url": "https://www.kaggle.com/organizations/kaggle",
+        "image": "https://storage.googleapis.com/kaggle-organizations/4/thumbnail.png"
+    },
+    "thumbnailUrl": "https://storage.googleapis.com/kaggle-datasets-images/2229/3763/default-backgrounds/dataset-card.png",
+    "dateModified": "2017-08-27T03:01:50.747",
+    "datePublished": "2017-08-27T03:01:50.733",
+    "@type": "sc:Dataset",
+    "name": "Telecom customer",
+    "url": "https://www.kaggle.com/datasets/abhinav89/telecom-customer/versions/1",
+    "description": "Telecom customer churn prediction\n\nThis data set consists of 100 variables and approx 100 thousand records. This data set contains different variables explaining the attributes of telecom industry and various factors considered important while dealing with customers of telecom industry. The target variable here is churn which explains whether the customer will churn or not. We can use this data set to predict the customers who would churn or who wouldn\u0027t churn depending on various variables available."
+}

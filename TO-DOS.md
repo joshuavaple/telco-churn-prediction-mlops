@@ -1,0 +1,10 @@
+- [x] Find a simple ML use case: only 1 model artifact is needed (no need extra thing like tokenizer/vectorizer)
+- [x] Dev: Train and infer locally
+- [x] Dev: a local web API with FastAPI, test with a sample client script, write user instruction to use the endpoint
+- [x] Dev: make codes production ready
+- [x] Build: Containerize the web API, test with client script
+- [ ] Deploy: host the container on Azure - ACI, web service, etc.
+- [ ] Secure the API by API key or credentials
+- [ ] Advanced deployment 1: deploy on AKS with re-create strategy (with downtime)
+- [ ] Advanced deployment 2: zero downtime strategies with load-balancer
+- [ ] CICD with tests
