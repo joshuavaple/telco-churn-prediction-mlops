@@ -1,6 +1,11 @@
 # telco-churn-prediction-mlops
 A simple project to practice MLOps
 
+## 0. Requirements
+- Docker
+- Conda (or equivalent virtual env tool)
+- [Optional] make
+
 ## 1. DEV setup
 - cd to the project root
 - Creata a conda environment by `conda env create -f environment_dev.yaml`
@@ -9,15 +14,19 @@ A simple project to practice MLOps
 ## 2. Building a simple classifier
 - You can recreate the model and other artifacts by rerunning the 2 notebooks: `eda_clean_featurize.ipynb` and `train_eval.ipynb`.
 - Running them will replace pretrained artifacts from the `prediction_service/models` folder
-- However, they are not the focus of this project. You can use pretrained artifacts above.
+- However, they are not the focus of this project, which is about deploying a ML model as a REST API. You can use pretrained artifacts above.
 
 ## 3. Serving the model locally outside a container
 - cd to prediction_service/
 - Run the command `make run-dev` to start a FastAPI service.
+- Without Make, copy and run the command (bash) in the Makefile from your terminal.
 
 ## 4. Build and run model prediction service locally in a container
 - cd to prediction_service/
 - Run the command `make run-live` to build the service image (containing the pretrained artifacts) and run it in a local container.
+- Without Make, copy and run the docker commands below in the Makefile from your terminal separately. You can pick a different image tag and ports if you want. For the ports, ensure the Dockerfile container port is consistent with the port mapping `host_port:container_port` in the docker run command.
+    - `docker build --no-cache -t telco-churn-prediction-service .`
+    - `docker run -p 8082:8082 telco-churn-prediction-service`
 
 ## 5. How to use the inference endpoints
 - There are 2 endpoints when the service is running: `/predict` (without API key) and `/predict-auth` (with API key)
